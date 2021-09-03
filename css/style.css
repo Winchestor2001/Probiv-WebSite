@@ -211,6 +211,7 @@ body{
     top: 28px;
     right: 60px;
 }
+
 .cencel:hover i{
     text-shadow: 0 0 15px red;
 }
