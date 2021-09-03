@@ -9,30 +9,67 @@ $(function(){
         
         if (res == 'Пробив по номеру'){
             $('.modal_1').css({opacity: '1', visibility: 'visible'});
+            $('.cencel i').css({top: '8px', right: '4px', fontSize: '22px'})
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'МВД'){
             $('.modal_2').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'ФНС'){
             $('.modal_3').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'ПФР'){
             $('.modal_4').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'Мини-досье (автовыдача)'){
             $('.modal_5').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'Верефикация Готовые кошельки'){
             $('.modal_6').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'Мобильные операторы'){
             $('.modal_7').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'Флуд и рассылка'){
             $('.modal_8').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
         else if (res == 'Пробив КИ'){
             $('.modal_9').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         }
 	}
 
