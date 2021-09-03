@@ -1,108 +1,128 @@
-$(function(){
+@media (max-width: 1178px) {
+  .content__box {
+    width: 38%;
+  }
+  .content {
+    height: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .content__box {
+    width: 33%;
+  }
+}
+@media (max-width: 888px) {
+  .modal_1,
+  .modal_2,
+  .modal_3,
+  .modal_4,
+  .modal_5,
+  .modal_6,
+  .modal_7,
+  .modal_8,
+  .modal_9 {
+    width: 600px;
+  }
+  .modal__btn {
+    margin-top: -60px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .hamburger {
+    display: block;
+  }
+  .menu {
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    left: -1px;
+    top: 80px;
+    background: #fff;
+    width: 100%;
+    padding: 25px 0;
+    text-align: center;
+    z-index: 1;
+    display: none;
+  }
+  .menu__item + .menu__item {
+    margin: 0;
+  }
+  .menu__item {
+    margin-bottom: 30px;
+  }
+  .menu__item:nth-child(2) {
+    margin-bottom: 30px;
+  }
+  .content__inner {
+    padding-top: 80px;
+  }
+
+  .modal_1,
+  .modal_2,
+  .modal_3,
+  .modal_4,
+  .modal_5,
+  .modal_6,
+  .modal_7,
+  .modal_8,
+  .modal_9 {
+    width: 500px;
+  }
+  .modal__btn {
+    margin-top: -80px !important;
+  }
+}
+
+@media (max-width: 660px) {
+  .content__box {
+    width: 100%;
+  }
+  .modal_1,
+  .modal_2,
+  .modal_3,
+  .modal_4,
+  .modal_5,
+  .modal_6,
+  .modal_7,
+  .modal_8,
+  .modal_9 {
+    width: 400px;
+    overflow: scroll;
+    border-radius: 0;
+  }
+  .modal__btn {
+    margin-top: -50px !important;
+  }
+  .modal__title{
+    font-size: 25px;
+  }
+  .modal__text{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 660px) {
+  .modal_1,
+  .modal_2,
+  .modal_3,
+  .modal_4,
+  .modal_5,
+  .modal_6,
+  .modal_7,
+  .modal_8,
+  .modal_9 {
+    width: 250px;
+    padding: 15px 25px;
+    overflow-x: hidden;
+  }
+  .cencel i{
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+  }
+}
 
 
-    const div = document.querySelector( ".content__inner" ); // находим первый элемент <div> в документе
-	div.addEventListener("click", showTargets); // регистрируем обработчик события "click" для элемента <div>
 
-	function showTargets( event ) {
-        let res = event.target.innerText
-        
-        if (res == 'Пробив по номеру'){
-            $('.modal_1').css({opacity: '1', visibility: 'visible'});
-            $('.cencel i').css({top: '8px', right: '4px', fontSize: '22px'})
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'МВД'){
-            $('.modal_2').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'ФНС'){
-            $('.modal_3').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'ПФР'){
-            $('.modal_4').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'Мини-досье (автовыдача)'){
-            $('.modal_5').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'Верефикация Готовые кошельки'){
-            $('.modal_6').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'Мобильные операторы'){
-            $('.modal_7').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'Флуд и рассылка'){
-            $('.modal_8').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-        else if (res == 'Пробив КИ'){
-            $('.modal_9').css({opacity: '1', visibility: 'visible'});
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        }
-	}
-
-
-    $('.hamburger').click(function(){
-        $('.menu').toggleClass('active')
-    });
-
-
-    $('.cencel').click(function(){
-        $('.modal_1').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_2').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_3').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_4').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_5').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_6').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_7').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_8').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_9').css({opacity: '0', visibility: 'hidden'});
-    });
-    $('.modal__btn').click(function(){
-        $('.modal_1').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_2').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_3').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_4').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_5').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_6').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_7').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_8').css({opacity: '0', visibility: 'hidden'});
-        $('.modal_9').css({opacity: '0', visibility: 'hidden'});
-    });
-
-
-
-
-});
