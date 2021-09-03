@@ -1,224 +1,108 @@
-a {
-  color: inherit;
-  text-decoration: none;
-}
+$(function(){
 
 
-.modal_1,
-  .modal_2,
-  .modal_3,
-  .modal_4,
-  .modal_5,
-  .modal_6,
-  .modal_7,
-  .modal_8,
-  .modal_9 {
-    
-  }
+    const div = document.querySelector( ".content__inner" ); // находим первый элемент <div> в документе
+	div.addEventListener("click", showTargets); // регистрируем обработчик события "click" для элемента <div>
+
+	function showTargets( event ) {
+        let res = event.target.innerText
+        
+        if (res == 'Пробив по номеру'){
+            $('.modal_1').css({opacity: '1', visibility: 'visible'});
+            $('.cencel i').css({top: '8px', right: '4px', fontSize: '22px'})
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'МВД'){
+            $('.modal_2').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'ФНС'){
+            $('.modal_3').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'ПФР'){
+            $('.modal_4').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'Мини-досье (автовыдача)'){
+            $('.modal_5').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'Верефикация Готовые кошельки'){
+            $('.modal_6').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'Мобильные операторы'){
+            $('.modal_7').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'Флуд и рассылка'){
+            $('.modal_8').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+        else if (res == 'Пробив КИ'){
+            $('.modal_9').css({opacity: '1', visibility: 'visible'});
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+	}
 
 
-
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-  max-width: 1220px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.hamburger{
-    cursor: pointer;
-    display: none;
-}
-.hamburger{
-    width: 38px;
-    height: 2.5px;
-    background: #fff;
-    margin-top: 31px;
-}
-.hamburger::after,
-.hamburger::before{
-    content: '';
-    position: absolute;
-    width: 38px;
-    height: 2px;
-    background: #fff;
-}
-.hamburger::after{
-    top: 50%;
-}
-.hamburger::before{
-    top: 61%;
-}
-.active{
-    display: block !important;
-}
+    $('.hamburger').click(function(){
+        $('.menu').toggleClass('active')
+    });
 
 
-
-
-.header{
-    background: #808080;
-    box-shadow: 0 0 12px #000;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-}
-.header__inner{
-    display: flex;
-    justify-content: space-between;
-}
-.menu{
-    display: flex;
-    margin-top: 30px;
-    transition: all .5s linear;
-}
-.logo{
-    cursor: pointer;
-    order: -1;
-}
-.logo img{
-    width: 50px;
-    border-radius: 50%;
-    display: inline-block;
-    margin-top: 15px;
-    transition: all .4s linear;
-}
-.logo:hover img{
-    width: 60px;
-    margin-top: 10px;
-}
-.menu__item+.menu__item{
-    margin-left: 30px;
-}
-.menu__link{
-    font-size: 20px;
-    font-weight: 600;
-    transition: all .5s linear;
-    padding: 10px 25px;
-    color: indigo;
-}
-.menu__link:hover{
-    background: indigo;
-    color: #fff;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-
-}
-
-
-.content{
-    width: 100%;
-    padding-top: 80px;
-    height: 100vh;
-    background: linear-gradient(-45deg, #232526, #414345);
-    padding-bottom: -20px;
-    
-}
-.content__inner{
-    padding-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-.content__box{
-    padding: 20px 50px;
-    background: rgb(190, 188, 21);
-    width: 250px;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    margin-bottom: 50px;
-    /* margin-left: 80px; */
-    box-shadow: 0 0 22px indigo;
-    transition: all .3s linear;
-    cursor: pointer;
-}
-.content__box:hover{
-    box-shadow: 0 0 22px indigo, 0 0 23px indigo, 0 0 28px indigo, 0 0 32px indigo;
-}
-.content__box-title{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 28px;
-    text-align: center;
-    color: #fff;
-}
-
-
-.footer{
-    width: 100%;
-    height: 100%;
-    background: #222;
-    color: rgb(122, 117, 117);
-    padding: 40px 0;
-    text-align: center;
-}
-.footer__title span{
-    color: rgb(30, 145, 87);
-}
+    $('.cencel').click(function(){
+        $('.modal_1').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_2').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_3').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_4').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_5').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_6').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_7').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_8').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_9').css({opacity: '0', visibility: 'hidden'});
+    });
+    $('.modal__btn').click(function(){
+        $('.modal_1').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_2').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_3').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_4').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_5').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_6').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_7').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_8').css({opacity: '0', visibility: 'hidden'});
+        $('.modal_9').css({opacity: '0', visibility: 'hidden'});
+    });
 
 
 
 
-
-.modal_1,.modal_2,.modal_3,
-.modal_4,.modal_5,.modal_6,
-.modal_7,.modal_8,.modal_9{
-    color: #fff;
-    width: 700px;
-    height: 400px;
-    background: rgba(90, 45, 148, 0.9);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 48px 60px;
-    border-radius: 20px;
-    box-shadow: 0 0 15px #414345, 0 0 22px #414345;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .5s linear;
-}
-.modal__title{
-    font-size: 38px;
-    text-align: center;
-    margin-bottom: 22px;
-}
-.modal__text{
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: 1px;
-    margin-bottom: 100px;
-}
-.modal__btn{
-    font-size: 22px;
-    background: red;
-    padding: 18px 38px;
-    border-radius: 8px;
-    text-align: center;
-    display: block;
-}
-
-.cencel i{
-    color: red;
-    font-size: 35px;
-    position: absolute;
-    top: 28px;
-    right: 60px;
-}
-.cencel:hover i{
-    text-shadow: 0 0 15px red;
-}
-
-
-
-
-
-
-
-
+});
